@@ -14,7 +14,7 @@ import (
 
 func init() {
 	//reasonable defaults for defaultHttpClient
-	http.DefaultClient.Timeout = 10 * time.Second
+	http.DefaultClient.Timeout = 30 * time.Second
 }
 
 func main() {

@@ -30,7 +30,7 @@ func NewCertstream(opts ...Option) (*Certstream, error) {
 	cs := &Certstream{
 		loglistUrl:      DefaultLogListUrl,
 		websocketListen: ":8080",
-		broadcaster:     NewBroadcaster(256),
+		broadcaster:     NewBroadcaster(10000),
 		workers:         make(map[string]context.CancelFunc),
 	}
 	// Apply options
